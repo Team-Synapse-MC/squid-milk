@@ -13,6 +13,9 @@ public class ModItems {
     public static final RegistryObject<Item> SQUID_MILK_BUCKET = ITEMS.register("squid_milk_bucket",
             SquidMilkBucketItem::new);
 
+    public static final RegistryObject<Item> SQUID_BOMB = ITEMS.register("squid_bomb",
+            SquidBombItem::new);
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
