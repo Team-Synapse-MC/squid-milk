@@ -26,6 +26,16 @@ public class ModEntities {
                             .build("squid_bomb_projectile")
             );
 
+    public static final RegistryObject<EntityType<SquidBombEntity>> SQUID_BOMB =
+            ENTITIES.register("squid_bomb", () ->
+                    EntityType.Builder.<SquidBombEntity>of(SquidBombEntity::new, MobCategory.MISC)
+                            .sized(10F, 10F)
+                            .clientTrackingRange(4)
+                            .updateInterval(10)
+                            .build("squid_bomb")
+            );
+
+
     public static void register(IEventBus eventBus) {
         ENTITIES.register(eventBus);
     }
@@ -33,5 +43,6 @@ public class ModEntities {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         EntityRenderers.register(ModEntities.SQUID_BOMB_PROJECTILE.get(), ThrownItemRenderer::new);
+        EntityRenderers.register(ModEntities.SQUID_BOMB.get(), SquidBombRenderer::new);
     }
 }

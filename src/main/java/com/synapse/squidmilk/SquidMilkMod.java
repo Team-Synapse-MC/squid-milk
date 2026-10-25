@@ -3,6 +3,7 @@ package com.synapse.squidmilk;
 import com.mojang.logging.LogUtils;
 import com.synapse.squidmilk.entities.ModEntities;
 import com.synapse.squidmilk.items.ModItems;
+import com.synapse.squidmilk.particles.ModParticles;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -32,6 +33,7 @@ public class SquidMilkMod
 
         ModItems.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModParticles.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
