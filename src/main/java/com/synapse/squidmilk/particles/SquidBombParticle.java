@@ -34,7 +34,7 @@ public class SquidBombParticle extends TextureSheetParticle {
         // fade away
         float interval = (float) (7 * this.lifetime) / 8;
         if (this.age > interval) {
-            this.setAlpha(1.0F - ((float)this.age - lifetime) / ((float) this.lifetime / 8));
+            this.setAlpha(1.0F - ((float)this.age - interval) / ((float) this.lifetime / 8));
         }
 
         this.xd += (this.random.nextDouble() - 0.5) * 0.01;
