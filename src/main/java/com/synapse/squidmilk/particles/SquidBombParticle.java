@@ -19,7 +19,7 @@ public class SquidBombParticle extends TextureSheetParticle {
         this.sprites = sprites;
         this.quadSize = 0.5F;
         this.setAlpha(1.0F);
-        this.lifetime = 200;
+        this.lifetime = 240;
         this.setColor((float) FastColor.ARGB32.red(pPackedColor), (float)FastColor.ARGB32.green(pPackedColor), (float)FastColor.ARGB32.blue(pPackedColor));
         this.setSpriteFromAge(sprites);
     }

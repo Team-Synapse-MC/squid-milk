@@ -7,7 +7,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
@@ -40,7 +39,7 @@ public class SquidBombEntity extends Entity {
     public void tick() {
         super.tick();
         // get entities in area
-        List<LivingEntity> entities = this.level().getEntitiesOfClass(LivingEntity.class, AABB.ofSize(this.position(), 10.0f, 10.0f, 10.0f));
+        List<LivingEntity> entities = this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox());
 
         for (LivingEntity entity : entities) {
             // remove beneficial effects
@@ -52,6 +51,10 @@ public class SquidBombEntity extends Entity {
 
             // inflict blindness
             entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100));
+        }
+
+        if (this.tickCount > 200) {
+            this.remove(RemovalReason.DISCARDED);
         }
     }
 
