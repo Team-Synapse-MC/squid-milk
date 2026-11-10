@@ -1,6 +1,9 @@
 {
+  "creativetab.squidmilk_tab": "Squid Milk",
+
   "item.squidmilk.squid_milk_bucket": "Squid Milk Bucket",
   "item.squidmilk.squid_bomb": "Squid Bomb",
 
-  "entity.squidmilk.squid_bomb_projectile": "Squid Bomb"
+  "entity.squidmilk.squid_bomb_projectile": "Squid Bomb",
+  "entity.squidmilk.squid_bomb": "Squid Bomb"
 }
