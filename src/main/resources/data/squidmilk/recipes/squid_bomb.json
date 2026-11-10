@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "item": "squidmilk:squid_milk_bucket"
+    },
+    "I": {
+      "item": "minecraft:ink_sac"
+    }
+  },
+  "pattern": [
+    " I ",
+    "IMI",
+    " I "
+  ],
+  "result": {
+    "item": "squidmilk:squid_bomb"
+  }
+}
