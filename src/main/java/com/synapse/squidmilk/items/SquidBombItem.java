@@ -11,7 +11,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-public class SquidBombItem extends TridentItem {
+public class SquidBombItem extends Item {
     private final int maxChargeTime = 40;
 
     public SquidBombItem() {
